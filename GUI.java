@@ -10,7 +10,7 @@ public class GUI extends JFrame {
     JButton numBtn[];
     JTextField output;
     String previous, current, operator;
-    
+
     public void processOutputNumber() {
         if (current.length() > 0) {
             String integerPart = current.split("\\.")[0];
@@ -65,8 +65,8 @@ public class GUI extends JFrame {
             return;
         }
         double result = 0.0;
-        double num1 = Double.parseDouble(previous);
-        double num2 = Double.parseDouble(current);
+        double number1 = Double.parseDouble(previous);
+        double number2 = Double.parseDouble(current);
         switch (operator) {
             case "*":
                 result = num1 * num2;
@@ -79,12 +79,12 @@ public class GUI extends JFrame {
                 break;
             case "÷":
                 if (num2 == 0) {
-                // Handle division by zero error
-                JOptionPane.showMessageDialog(this, "Error: Division by zero", "Error", JOptionPane.ERROR_MESSAGE);
-                clear();
-                updateOutput();
-                return;
-            }
+                    // Handle division by zero error
+                    JOptionPane.showMessageDialog(this, "Error: Division by zero", "Error", JOptionPane.ERROR_MESSAGE);
+                    clear();
+                    updateOutput();
+                    return;
+                }
                 result = num1 / num2;
                 break;
             default:
