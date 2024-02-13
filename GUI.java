@@ -254,8 +254,6 @@ public class GUI extends JFrame {
         // Call pack() to size the window based on its contents
         this.pack();
 
-        // Center the window on the screen
-        // this.setLocationRelativeTo(null);
         int width = 205;
         int height = 280;
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
