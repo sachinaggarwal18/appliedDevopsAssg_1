@@ -9,8 +9,8 @@ public class GUI extends JFrame {
     JButton btnAdd, btnSubtract, btnDivide, btnMultiply, btnClear, btnDelete, btnEquals, btnDot;
     JButton numBtn[];
     JTextField output;
-    String previous, current, operator;
-    
+    String previous1, current1, operator1;
+
     public void processOutputNumber() {
         if (current.length() > 0) {
             String integerPart = current.split("\\.")[0];
@@ -79,12 +79,12 @@ public class GUI extends JFrame {
                 break;
             case "÷":
                 if (num2 == 0) {
-                // Handle division by zero error
-                JOptionPane.showMessageDialog(this, "Error: Division by zero", "Error", JOptionPane.ERROR_MESSAGE);
-                clear();
-                updateOutput();
-                return;
-            }
+                    // Handle division by zero error
+                    JOptionPane.showMessageDialog(this, "Error: Division by zero", "Error", JOptionPane.ERROR_MESSAGE);
+                    clear();
+                    updateOutput();
+                    return;
+                }
                 result = num1 / num2;
                 break;
             default:
